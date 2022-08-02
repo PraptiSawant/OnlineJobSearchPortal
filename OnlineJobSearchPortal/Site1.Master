@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="OnlineJobSearchPortal.Site1" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="StyleSheet2.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+              <div style="height: 103px ; padding-top:20px;padding-left:40px; padding-top:40px;" class="nav">
+                <asp:Label ID="Label1" runat="server"  Text="Job" ></asp:Label>
+                <asp:Label ID="Label2" runat="server"  Text="Search" ></asp:Label>
+                <asp:Menu ID="Menu1" CssClass="menu1" runat="server" Orientation="Horizontal" OnMenuItemClick="Menu1_MenuItemClick">
+                    <Items>
+                        <asp:MenuItem Text="Home" Value="Home" NavigateUrl="WebForm1.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Admin Login" Value="Admin Login"></asp:MenuItem>
+                        <asp:MenuItem Text="Contact Us" Value="Contact Us" NavigateUrl="Contactus.aspx"></asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BorderColor="Silver" BorderStyle="Solid" />
+                    <StaticMenuItemStyle HorizontalPadding="20px" ForeColor="Black" />
+                    <StaticItemTemplate>
+                        <%# Eval("Text") %>
+                    </StaticItemTemplate>
+                </asp:Menu>
+                </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
